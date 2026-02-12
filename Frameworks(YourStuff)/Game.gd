@@ -1,9 +1,7 @@
-class_name Game extends Node2D
-
+@abstract class_name Game extends Node2D
 var game_manager: GameManager
 
-signal game_finished(game_root : Node, won : bool)
-signal start_game
+##call this signal when your game is done
 signal end_game(won : bool)
 
 func _ready() -> void:
@@ -12,15 +10,12 @@ func _ready() -> void:
 	else:
 		game_manager = get_parent()
 
-func _start_game(): #this function is automatically called when the scene transitions in
-	end_game.connect(_end_game, 1)
-	start_game.emit()
+## automatically plays on scene load, NOTE: do NOT make a ready function if extending this class otherwise this will not work. Treat this as your ready function extension.
+@abstract
+func _start_game() #this function is automatically called when the scene transitions in
 
-func _end_game(won : bool): #you cann this funciton or emit the end_game signal to close your game(include if the player has won or lost)
-	MainCamera.add_trauma(.1,Vector2(-1,0)) #camera shake
-	game_finished.emit(self, won)
-
-func get_intensity(): #returns the time_value
+## returns the game intensity if connected to the main game, otherwise returns an intensity of 1.0
+func get_intensity() -> float: #returns the intensity
 	if game_manager: 
 		return game_manager.game_intensity
 	else:
