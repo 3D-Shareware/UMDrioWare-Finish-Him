@@ -12,8 +12,9 @@ const TRANS_TIME = 1.0
 ## List of all available games to play
 const BASEPLATE = preload("res://Frameworks(YourStuff)/BasePlate/Baseplate.tscn")
 const VANDALISM_JUDE_ = preload("res://Frameworks(YourStuff)/Jude/ShakeColors/Vandalism(Jude).tscn")
+const FINISH_HIM_KEVIN = preload("res://Frameworks(YourStuff)/Kevin/FinishHim/scenes/game_container.tscn")
 
-var all_games : Array[PackedScene] = [BASEPLATE, VANDALISM_JUDE_]
+var all_games : Array[PackedScene] = [BASEPLATE, VANDALISM_JUDE_, FINISH_HIM_KEVIN]
 ## List of games left to play this stage before time scale increases
 var games_to_play_this_stage : Array[PackedScene]
 var score : int = 0
