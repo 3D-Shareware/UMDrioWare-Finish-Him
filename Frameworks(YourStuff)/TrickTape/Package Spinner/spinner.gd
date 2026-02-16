@@ -40,9 +40,12 @@ func _input(event: InputEvent) -> void:
 func drag(event: InputEventMouseMotion):
 	if package == null:
 		return
-	var target_input_dir : Vector2 = Vector2(tape_dispenser.global_position.x, tape_dispenser.global_position.y)
-	var spin_effectiveness : float = abs(target_input_dir.normalized().dot(event.relative.normalized()))
+
+	var target_input_dir : Vector2 = Vector2(-tape_dispenser.global_position.x, tape_dispenser.global_position.y)
+	var spin_effectiveness : float = target_input_dir.normalized().dot(event.relative.normalized())
+	spin_effectiveness = clamp(spin_effectiveness, 0.0, 1.0)
 	var spin_power : float = clamp(0, 20,  event.relative.length())
+	tape_dispenser.enabled = true
 	coverage += COVERAGE_INCREMENT_AMOUNT * spin_effectiveness * spin_power
 	package.next_rotation_dir = event.relative
 	coverage = clamp(coverage, 0, 100)

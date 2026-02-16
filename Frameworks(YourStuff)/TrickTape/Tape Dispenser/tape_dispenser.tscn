@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://c280qqcd8o0j2"]
 
-[ext_resource type="Script" uid="uid://dlvwtqnbdtiqi" path="res://Tape Dispenser/tape_dispenser.gd" id="1_rb1y6"]
-[ext_resource type="Texture2D" uid="uid://bh0q5saffsr46" path="res://Tape Dispenser/Assets/band.png" id="2_4o3lq"]
+[ext_resource type="Script" uid="uid://dlvwtqnbdtiqi" path="res://Frameworks(YourStuff)/TrickTape/Tape Dispenser/tape_dispenser.gd" id="1_rb1y6"]
+[ext_resource type="Texture2D" uid="uid://bh0q5saffsr46" path="res://Frameworks(YourStuff)/TrickTape/Tape Dispenser/Assets/band.png" id="2_4o3lq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_agw1a"]
 albedo_texture = ExtResource("2_4o3lq")
