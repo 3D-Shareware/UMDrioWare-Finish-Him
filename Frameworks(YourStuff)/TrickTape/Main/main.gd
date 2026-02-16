@@ -5,6 +5,7 @@ extends Node3D
 @onready var timer: TextureProgressBar = $Timer
 @onready var tape_dispenser_positioner: Node3D = $TapeDispenserPositioner
 
+var MAX_PACKAGE_NUM : int = 3
 var wrapped_packages_num : int = 0
 
 signal game_was_lost
@@ -20,15 +21,15 @@ func _ready() -> void:
 
 func _on_player_died():
 	game_was_lost.emit()
-	print('player died')
+	#print('player died')
 
 func _on_package_finished_wrapping():
 	wrapped_packages_num += 1
 	timer.start()
-	if wrapped_packages_num == 3:
+	if wrapped_packages_num >= MAX_PACKAGE_NUM:
 		game_was_won.emit()
 		timer.pause()
 		# TODO: Connect to framework to cycle to next screen
-		print('win game')
+		#print('win game')
 		#game_was_won.emit()
 		#get_tree().quit()

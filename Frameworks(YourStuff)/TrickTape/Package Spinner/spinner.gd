@@ -56,12 +56,12 @@ func drag(event: InputEventMouseMotion):
 		go_to_next_package()
 
 func go_to_next_package():
-	if available_packages.is_empty():
-		available_packages = packages.duplicate()
-		available_packages.shuffle()
 	delete_old_package(package)
 	package = null
 	await get_tree().create_timer(0.5).timeout
+	if available_packages.is_empty():
+		available_packages = packages.duplicate()
+		available_packages.shuffle()
 	package = available_packages.pop_front().instantiate()
 	if paused: return
 	add_child(package)

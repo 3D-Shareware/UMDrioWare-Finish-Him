@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cllha1cynus8d"]
 
-[ext_resource type="Script" uid="uid://bnhjdtuweuh22" path="res://Timer/timer.gd" id="1_6ihu3"]
-[ext_resource type="Texture2D" uid="uid://2a5p1uos24po" path="res://Timer/Assets/2026_02_13_003_Kleki.png" id="2_w6vf6"]
-[ext_resource type="Script" uid="uid://bwydkj0qna4sg" path="res://Timer/timer_progress.gd" id="3_3k44h"]
-[ext_resource type="Texture2D" uid="uid://cv1uh2n088344" path="res://Timer/Assets/2026_02_13_002_Kleki.png" id="4_gdk6k"]
-[ext_resource type="Texture2D" uid="uid://ktkv1ag7by55" path="res://Timer/Assets/2026_02_12_13n_Kleki.png" id="5_w6vf6"]
+[ext_resource type="Script" uid="uid://bnhjdtuweuh22" path="res://Frameworks(YourStuff)/TrickTape/Timer/timer.gd" id="1_6ihu3"]
+[ext_resource type="Texture2D" uid="uid://2a5p1uos24po" path="res://Frameworks(YourStuff)/TrickTape/Timer/Assets/2026_02_13_003_Kleki.png" id="2_w6vf6"]
+[ext_resource type="Script" uid="uid://bwydkj0qna4sg" path="res://Frameworks(YourStuff)/TrickTape/Timer/timer_progress.gd" id="3_3k44h"]
+[ext_resource type="Texture2D" uid="uid://cv1uh2n088344" path="res://Frameworks(YourStuff)/TrickTape/Timer/Assets/2026_02_13_002_Kleki.png" id="4_gdk6k"]
+[ext_resource type="Texture2D" uid="uid://ktkv1ag7by55" path="res://Frameworks(YourStuff)/TrickTape/Timer/Assets/2026_02_12_13n_Kleki.png" id="5_w6vf6"]
 
 [node name="ProgressBar" type="TextureProgressBar" unique_id=1334387193]
 offset_left = 1021.0

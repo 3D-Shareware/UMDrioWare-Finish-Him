@@ -14,6 +14,12 @@ extends Game
 @onready var blood_2: Sprite2D = $Node/Blood/BottomBlood/Blood2
 
 func _start_game():
+	main.timer.PACKAGE_TIME -= get_intensity() / 0.2
+	main.timer.PACKAGE_TIME = clamp(main.timer.PACKAGE_TIME, 4.0, 8.0)
+	#print("main.timer.PACKAGE_TIME, ", main.timer.PACKAGE_TIME)
+	main.MAX_PACKAGE_NUM = get_intensity() / 0.4
+	main.MAX_PACKAGE_NUM = clamp(main.MAX_PACKAGE_NUM, 0, 5)
+	#print("main.MAX_PACKAGE_NUM, ", main.MAX_PACKAGE_NUM)
 	main.game_was_lost.connect(lost_game)
 	main.game_was_won.connect(won_game)
 	Input.set_custom_mouse_cursor(load("res://Frameworks(YourStuff)/TrickTape/Cursor/carrot cursor.png"))
@@ -39,7 +45,7 @@ func lost_game() -> void:
 	await get_tree().create_timer(1.5).timeout
 	get_tree().paused = true
 	Input.set_custom_mouse_cursor(null)
-	print('move on to next game')
+	#print('move on to next game')
 	end_game.emit(false)
 	get_tree().paused = false
 
@@ -50,6 +56,6 @@ func won_game() -> void:
 	get_tree().paused = true
 	await win_lose_screen.win_anim_finished
 	Input.set_custom_mouse_cursor(null)
-	print('move on to next game')
+	#print('move on to next game')
 	end_game.emit(true)
 	get_tree().paused = false

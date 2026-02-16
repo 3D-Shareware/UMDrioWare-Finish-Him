@@ -6,14 +6,14 @@ extends TextureProgressBar
 
 signal player_died
 
-const PACKAGE_TIME : float = 7.0
+var PACKAGE_TIME : float = 15.0
 
 func _ready() -> void:
-	timer.start(PACKAGE_TIME)
-	max_value = PACKAGE_TIME
+	start()
 
 func start():
 	timer.start(PACKAGE_TIME)
+	max_value = PACKAGE_TIME
 
 func pause():
 	timer.paused = true
