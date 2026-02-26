@@ -9,7 +9,7 @@ var eldritch_game : EldritchGame
 var path_movement_percent : float
 var planets : Array[Planet]
 var paths_array : Array[EldritchParticleFollow] = []
-
+var should_be_moving : bool = true
 
 @export var planets_to_spawn : Array[bool]
 
@@ -53,6 +53,8 @@ func space_out_planets() -> void:
 		path.progress_ratio = progress_amount
 
 func progress_paths() -> void:
+	if !should_be_moving:
+		return
 	for path : EldritchParticleFollow in paths_array:
 		if path.is_being_eaten:
 			continue
