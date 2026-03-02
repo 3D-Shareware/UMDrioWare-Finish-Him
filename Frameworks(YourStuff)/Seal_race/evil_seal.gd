@@ -44,7 +44,7 @@ func glumph():
 		var tween = create_tween()
 		tween.tween_property(evil_seal, "scale", Vector2(.8, 1.4), .05)
 		
-	pass
+	
 	
 func _on_area_entered(body):
 	print ("unslap bellay")

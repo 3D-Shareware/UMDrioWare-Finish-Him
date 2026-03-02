@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bj3b87x00v2o5"
-path="res://.godot/imported/Sprite-0001.png-c16feda97667151f1a063931ff67e2cc.ctex"
+path="res://.godot/imported/Sprite-0001.png-f21e9f6043a7f2f032c4955aab9799ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite-0001.png"
-dest_files=["res://.godot/imported/Sprite-0001.png-c16feda97667151f1a063931ff67e2cc.ctex"]
+source_file="res://Frameworks(YourStuff)/Seal_race/Assets/Sprite-0001.png"
+dest_files=["res://.godot/imported/Sprite-0001.png-f21e9f6043a7f2f032c4955aab9799ad.ctex"]
 
 [params]
 

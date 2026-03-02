@@ -17,6 +17,7 @@ var has_won := false
 
 func _ready():
 	ocean.body_entered.connect(_on_area_entered)
+
 func _process(delta):
 	
 	var on_ground = ray_cast_2d.is_colliding()
@@ -49,7 +50,7 @@ func land_stretch(delta):
 	
 func glumph():
 	
-	if Input.is_action_just_pressed("Increase_speed") and ray_cast_2d.is_colliding():
+	if Input.is_action_just_pressed("space") and ray_cast_2d.is_colliding():
 		apply_central_impulse(Vector2(300,-400))
 		var tween = create_tween()
 		tween.tween_property(seal_sprite, "scale", Vector2(.8, 1.4), .1)

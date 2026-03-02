@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxntdc1warmdt"
-path="res://.godot/imported/Space.png-d156da3c6e1248725f1359410603d251.ctex"
+path="res://.godot/imported/Space.png-b6105a23b2b7cb21ed1c8c296e0c9dc8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Space.png"
-dest_files=["res://.godot/imported/Space.png-d156da3c6e1248725f1359410603d251.ctex"]
+source_file="res://Frameworks(YourStuff)/Seal_race/Assets/Space.png"
+dest_files=["res://.godot/imported/Space.png-b6105a23b2b7cb21ed1c8c296e0c9dc8.ctex"]
 
 [params]
 

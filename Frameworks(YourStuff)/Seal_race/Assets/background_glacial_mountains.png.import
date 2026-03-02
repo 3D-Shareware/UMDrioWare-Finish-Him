@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0dshgjxsqgh1"
-path="res://.godot/imported/background_glacial_mountains.png-95c26daddece33ef386974b643b1a6fe.ctex"
+path="res://.godot/imported/background_glacial_mountains.png-61bd5a6c188a3cd845e75dc4186d387e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/background_glacial_mountains.png"
-dest_files=["res://.godot/imported/background_glacial_mountains.png-95c26daddece33ef386974b643b1a6fe.ctex"]
+source_file="res://Frameworks(YourStuff)/Seal_race/Assets/background_glacial_mountains.png"
+dest_files=["res://.godot/imported/background_glacial_mountains.png-61bd5a6c188a3cd845e75dc4186d387e.ctex"]
 
 [params]
 

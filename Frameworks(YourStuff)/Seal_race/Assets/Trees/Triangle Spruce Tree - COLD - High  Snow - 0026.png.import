@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5nkayxfed31j"
-path="res://.godot/imported/Triangle Spruce Tree - COLD - High  Snow - 0026.png-f1a195b1e848964f8356ad0de7bedab5.ctex"
+path="res://.godot/imported/Triangle Spruce Tree - COLD - High  Snow - 0026.png-e82b302426d1edff5e5c780de4b9a265.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Trees/Triangle Spruce Tree - COLD - High  Snow - 0026.png"
-dest_files=["res://.godot/imported/Triangle Spruce Tree - COLD - High  Snow - 0026.png-f1a195b1e848964f8356ad0de7bedab5.ctex"]
+source_file="res://Frameworks(YourStuff)/Seal_race/Assets/Trees/Triangle Spruce Tree - COLD - High  Snow - 0026.png"
+dest_files=["res://.godot/imported/Triangle Spruce Tree - COLD - High  Snow - 0026.png-e82b302426d1edff5e5c780de4b9a265.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6uilebnupsdr"
-path="res://.godot/imported/download.jpg-f17400ebb7b32507f11fdeebb51c0563.ctex"
+path="res://.godot/imported/download.jpg-80e4d2880b8876141d6060108e859976.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/download.jpg"
-dest_files=["res://.godot/imported/download.jpg-f17400ebb7b32507f11fdeebb51c0563.ctex"]
+source_file="res://Frameworks(YourStuff)/Seal_race/Assets/download.jpg"
+dest_files=["res://.godot/imported/download.jpg-80e4d2880b8876141d6060108e859976.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bun56x1udu53w"
-path="res://.godot/imported/Flag.png-a64b2fc1f956b9f509220289c9364415.ctex"
+path="res://.godot/imported/Flag.png-67bdc4e5fcd792ecc2e85c785b9ce7d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Flag.png"
-dest_files=["res://.godot/imported/Flag.png-a64b2fc1f956b9f509220289c9364415.ctex"]
+source_file="res://Frameworks(YourStuff)/Seal_race/Assets/Flag.png"
+dest_files=["res://.godot/imported/Flag.png-67bdc4e5fcd792ecc2e85c785b9ce7d7.ctex"]
 
 [params]
 

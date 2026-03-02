@@ -1,13 +1,12 @@
-extends Node2D
+extends Game
+
 @onready var ribbon_seal: RigidBody2D = $Ribbon_Seal
 
 @onready var start_overlay: CanvasLayer = $StartOverlay
 @onready var main: Node2D = $"."
 @onready var evil_seal: RigidBody2D = $Evil_seal
 
-func _ready():
-	
-	
+func _start_game():
 	get_tree().paused = true
 	ribbon_seal.won.connect(_on_player_won)
 	

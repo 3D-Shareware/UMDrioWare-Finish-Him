@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgidgpdcg668l"
-path="res://.godot/imported/Slim Spruce Tree - COLD - High Snow0002.png-bb6de9a7e4045fd59363341784a594ce.ctex"
+path="res://.godot/imported/Slim Spruce Tree - COLD - High Snow0002.png-c30bae5a54da02744bcbec2f2fb6bbb5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Trees/Slim Spruce Tree - COLD - High Snow0002.png"
-dest_files=["res://.godot/imported/Slim Spruce Tree - COLD - High Snow0002.png-bb6de9a7e4045fd59363341784a594ce.ctex"]
+source_file="res://Frameworks(YourStuff)/Seal_race/Assets/Trees/Slim Spruce Tree - COLD - High Snow0002.png"
+dest_files=["res://.godot/imported/Slim Spruce Tree - COLD - High Snow0002.png-c30bae5a54da02744bcbec2f2fb6bbb5.ctex"]
 
 [params]
 

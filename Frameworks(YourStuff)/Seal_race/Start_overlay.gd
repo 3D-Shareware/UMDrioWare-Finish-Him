@@ -10,7 +10,7 @@ var meow : int = 0
 
 
 func _input(event) -> void:
-	if event.is_action_pressed("Increase_speed") and not Transitioning and meow == 0:
+	if event.is_action_pressed("space") and not Transitioning and meow == 0:
 		print("banana")     
 		start_transition()
 		meow += 1

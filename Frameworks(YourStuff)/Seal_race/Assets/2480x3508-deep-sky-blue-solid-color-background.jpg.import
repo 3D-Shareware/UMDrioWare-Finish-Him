@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bws7bhg76kudt"
-path="res://.godot/imported/2480x3508-deep-sky-blue-solid-color-background.jpg-bcb8886a94ce3417713c283eb2e12a13.ctex"
+path="res://.godot/imported/2480x3508-deep-sky-blue-solid-color-background.jpg-7a2549a1df5b7796c52aa6b469cba487.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2480x3508-deep-sky-blue-solid-color-background.jpg"
-dest_files=["res://.godot/imported/2480x3508-deep-sky-blue-solid-color-background.jpg-bcb8886a94ce3417713c283eb2e12a13.ctex"]
+source_file="res://Frameworks(YourStuff)/Seal_race/Assets/2480x3508-deep-sky-blue-solid-color-background.jpg"
+dest_files=["res://.godot/imported/2480x3508-deep-sky-blue-solid-color-background.jpg-7a2549a1df5b7796c52aa6b469cba487.ctex"]
 
 [params]
 

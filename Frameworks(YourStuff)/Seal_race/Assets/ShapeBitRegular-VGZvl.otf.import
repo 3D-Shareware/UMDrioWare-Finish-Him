@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://xf35mpj43a2s"
-path="res://.godot/imported/ShapeBitRegular-VGZvl.otf-52e8ea03902c700d0174b1a1a9cd1156.fontdata"
+path="res://.godot/imported/ShapeBitRegular-VGZvl.otf-22ea5664a3f2d52875321870aaada8ae.fontdata"
 
 [deps]
 
-source_file="res://Assets/ShapeBitRegular-VGZvl.otf"
-dest_files=["res://.godot/imported/ShapeBitRegular-VGZvl.otf-52e8ea03902c700d0174b1a1a9cd1156.fontdata"]
+source_file="res://Frameworks(YourStuff)/Seal_race/Assets/ShapeBitRegular-VGZvl.otf"
+dest_files=["res://.godot/imported/ShapeBitRegular-VGZvl.otf-22ea5664a3f2d52875321870aaada8ae.fontdata"]
 
 [params]
 
