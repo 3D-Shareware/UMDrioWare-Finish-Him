@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bri4lnwyvb3hv"
-path="res://.godot/imported/Progressbar_fill.png-3ddfddee11ad6f84bbe0d95b51a438fc.ctex"
+uid="uid://3uclvfn0abcv"
+path="res://.godot/imported/Bad_Planet1.png-3d974e5e701d62f15b5432a3d201c2c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Frameworks(YourStuff)/EldritchGame/Assets/Progressbar_fill.png"
-dest_files=["res://.godot/imported/Progressbar_fill.png-3ddfddee11ad6f84bbe0d95b51a438fc.ctex"]
+source_file="res://Frameworks(YourStuff)/EldritchGame/Assets/Bad_Planet1.png"
+dest_files=["res://.godot/imported/Bad_Planet1.png-3d974e5e701d62f15b5432a3d201c2c0.ctex"]
 
 [params]
 

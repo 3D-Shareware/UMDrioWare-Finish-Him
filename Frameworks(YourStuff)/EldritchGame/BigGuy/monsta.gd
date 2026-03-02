@@ -1,4 +1,4 @@
-class_name Monsta extends Sprite2D
+class_name Monsta extends Node2D
 
 signal bad_planet_eaten
 signal good_planet_eaten(hit_was_good : bool)
@@ -6,6 +6,7 @@ signal good_planet_eaten(hit_was_good : bool)
 @onready var eating_zone: EatingZone = $EatingZone
 @onready var marker_2d: Marker2D = $Marker2D
 @onready var clap: AudioStreamPlayer = $Clap
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var adaptive_music : EldritchAdaptiveMusic
 
@@ -16,6 +17,9 @@ func _ready() -> void:
 func suck_in_planet(planet : Planet):
 	var hit_was_good : bool
 	await adaptive_music.beat
+	if animation_player.is_playing():
+		animation_player.stop()
+	animation_player.play("gulp")
 	
 	if adaptive_music.bar_index % 4 == 0:
 		print("Good hit!")

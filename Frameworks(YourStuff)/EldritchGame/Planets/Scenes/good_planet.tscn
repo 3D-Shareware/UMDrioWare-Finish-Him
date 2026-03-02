@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://jaq2sk636hlb"]
 
 [ext_resource type="Script" uid="uid://bxyumpqg8suai" path="res://Frameworks(YourStuff)/EldritchGame/Planets/Script/good_planet.gd" id="1_y1esw"]
-[ext_resource type="Texture2D" uid="uid://c61aau1jumg7e" path="res://Frameworks(YourStuff)/EldritchGame/Assets/Bubble.png" id="2_03i3k"]
+[ext_resource type="Texture2D" uid="uid://b1aaiyqwwnxjx" path="res://Frameworks(YourStuff)/EldritchGame/Assets/Good_Planet1.png" id="2_y1esw"]
 [ext_resource type="Script" uid="uid://cv1tqomq6d35i" path="res://Frameworks(YourStuff)/EldritchGame/Effect Components/Scripts/Effects/node2D_effect.gd" id="3_hjphg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0l05c"]
@@ -12,8 +12,8 @@ z_index = 1
 script = ExtResource("1_y1esw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=881555108]
-scale = Vector2(0.375, 0.375)
-texture = ExtResource("2_03i3k")
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_y1esw")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=798091180]
 collision_layer = 0
@@ -37,8 +37,8 @@ metadata/_custom_type_script = "uid://cv1tqomq6d35i"
 unique_name_in_owner = true
 script = ExtResource("3_hjphg")
 affected_node = NodePath("../Sprite2D")
-start_scale = Vector2(0.5, 0.3)
-end_scale = Vector2(0.3, 0.8)
+start_scale = Vector2(0.8, 0.5)
+end_scale = Vector2(0.6, 1)
 reset_on_completion = true
 trans_type = 10
 tween_duration = 0.1

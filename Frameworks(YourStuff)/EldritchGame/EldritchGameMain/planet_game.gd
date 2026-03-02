@@ -5,16 +5,46 @@ const GOOD_EAT_AMOUNT : float = 20
 ## amount gained from imperfect chomp
 const BAD_EAT_AMOUNT : float = 5
 
+const MOUSE_CURSOR = preload("uid://bog33u2o2xq6k")
+
+var time : float = 20.0
+var max_time : float
+var round_started : bool = false
+
 @onready var monsta: Monsta = $Monsta
 @onready var hunger_bar: TextureProgressBar = $HungerBar
 @onready var eldritch_adaptive_music: EldritchAdaptiveMusic = $EldritchAdaptiveMusic
 @onready var particle_pathing: EldritchParticlePathing = $ParticlePathing
+@onready var timer: Timer = $Timer as Timer
+@onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
+@onready var time_left_notifier: ControlNodeEffectSequencer = $TextureProgressBar/TimeLeftNotifier as ControlNodeEffectSequencer
+
 
 @warning_ignore("unused_signal") signal switch_to_new_scene
 @warning_ignore("unused_signal") signal reload_scene
 
 func _ready() -> void:
+	Input.set_custom_mouse_cursor(MOUSE_CURSOR)
 	_start_game()
+		
+	await eldritch_adaptive_music.intro.finished
+	round_started = true
+	max_time = time * 100 * 2
+	texture_progress_bar.max_value = max_time
+	timer.start(time)
+
+
+func _process(_delta: float) -> void:
+	if round_started:
+		texture_progress_bar.value = timer.time_left * 100 * 2
+		if (
+			int(texture_progress_bar.value) % int(max_time / 4) >= -10 and 
+			int(texture_progress_bar.value) % int(max_time / 4) <= 10
+			):
+			if time_left_notifier.is_running:
+				return
+			time_left_notifier.do_effect_sequence()
+
 
 func _start_game():
 	monsta.bad_planet_eaten.connect(_on_bad_planet_eaten)

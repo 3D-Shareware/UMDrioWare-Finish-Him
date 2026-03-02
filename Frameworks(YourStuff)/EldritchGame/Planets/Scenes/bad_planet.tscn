@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dhjes0nrq5d64"]
 
 [ext_resource type="Script" uid="uid://brko2aabu4jh4" path="res://Frameworks(YourStuff)/EldritchGame/Planets/Script/bad_planet.gd" id="1_f3fvb"]
-[ext_resource type="Texture2D" uid="uid://c61aau1jumg7e" path="res://Frameworks(YourStuff)/EldritchGame/Assets/Bubble.png" id="2_j2a5b"]
+[ext_resource type="Texture2D" uid="uid://3uclvfn0abcv" path="res://Frameworks(YourStuff)/EldritchGame/Assets/Bad_Planet1.png" id="2_f3fvb"]
 [ext_resource type="Script" uid="uid://bxyumpqg8suai" path="res://Frameworks(YourStuff)/EldritchGame/Planets/Script/good_planet.gd" id="3_7jq6f"]
 [ext_resource type="Script" uid="uid://cv1tqomq6d35i" path="res://Frameworks(YourStuff)/EldritchGame/Effect Components/Scripts/Effects/node2D_effect.gd" id="4_dc0yi"]
 
@@ -9,12 +9,11 @@
 radius = 24.0
 
 [node name="BadPlanet" type="Node2D" unique_id=834697572]
-modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
 script = ExtResource("1_f3fvb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1435026524]
-scale = Vector2(0.375, 0.375)
-texture = ExtResource("2_j2a5b")
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_f3fvb")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1224554804]
 collision_layer = 0
@@ -38,8 +37,8 @@ metadata/_custom_type_script = "uid://cv1tqomq6d35i"
 unique_name_in_owner = true
 script = ExtResource("4_dc0yi")
 affected_node = NodePath("../Sprite2D")
-start_scale = Vector2(0.5, 0.3)
-end_scale = Vector2(0.3, 0.8)
+start_scale = Vector2(0.8, 0.5)
+end_scale = Vector2(0.6, 1)
 reset_on_completion = true
 trans_type = 10
 tween_duration = 0.1

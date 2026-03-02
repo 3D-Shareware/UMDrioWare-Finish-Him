@@ -1,65 +1,126 @@
 [gd_scene format=3 uid="uid://bh166ecxqy5qu"]
 
-[ext_resource type="Script" uid="uid://c302lviukvkgv" path="res://EldritchGame/Instructions/introduction_screen.gd" id="1_4l27e"]
-[ext_resource type="Texture2D" uid="uid://bri1hg8pxkjhc" path="res://EldritchGame/Instructions/Assets/Pop.png" id="1_esqfm"]
-[ext_resource type="Script" uid="uid://cv1tqomq6d35i" path="res://EldritchGame/Effect Components/Scripts/Effects/node2D_effect.gd" id="2_4l27e"]
-[ext_resource type="Texture2D" uid="uid://q4rukwv5x34i" path="res://EldritchGame/Instructions/Assets/mouse.png" id="3_m1c35"]
+[ext_resource type="Script" uid="uid://c302lviukvkgv" path="res://Frameworks(YourStuff)/EldritchGame/Instructions/introduction_screen.gd" id="1_4l27e"]
+[ext_resource type="Script" uid="uid://cv1tqomq6d35i" path="res://Frameworks(YourStuff)/EldritchGame/Effect Components/Scripts/Effects/node2D_effect.gd" id="2_4l27e"]
+[ext_resource type="Texture2D" uid="uid://opfhngr4vm2c" path="res://Frameworks(YourStuff)/EldritchGame/Assets/Intro_Screen.png" id="3_almnl"]
+
+[sub_resource type="Animation" id="Animation_c08fr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IntroScreen:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_almnl")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("IntroScreen:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("IntroScreen:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("IntroScreen:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_bekip"]
+resource_name = "intro"
+length = 2.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IntroScreen:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("IntroScreen:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_almnl")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("IntroScreen:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("IntroScreen:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_msnbl"]
+_data = {
+&"RESET": SubResource("Animation_c08fr"),
+&"intro": SubResource("Animation_bekip")
+}
 
 [node name="IntroductionScreen" type="Node2D" unique_id=773554877]
 process_mode = 3
 z_index = 5
 script = ExtResource("1_4l27e")
 
-[node name="Pop" type="Sprite2D" parent="." unique_id=776488977]
-z_index = 1
-position = Vector2(0, 164)
-scale = Vector2(4, 4)
-texture = ExtResource("1_esqfm")
-
-[node name="Scale" type="Node" parent="Pop" unique_id=768315627 node_paths=PackedStringArray("affected_node")]
-script = ExtResource("2_4l27e")
-affected_node = NodePath("..")
-start_scale = Vector2(4, 4)
-end_scale = Vector2(4.4, 4.4)
-loop = true
-autostart = true
-trans_type = 8
-ease_type = 2
-tween_duration = 0.8
-metadata/_custom_type_script = "uid://cv1tqomq6d35i"
-
-[node name="Rotate" type="Node" parent="Pop" unique_id=998388272 node_paths=PackedStringArray("affected_node")]
-script = ExtResource("2_4l27e")
-affected_node = NodePath("..")
-start_rotation = 5.0
-end_rotation = -5.0
-loop = true
-autostart = true
-trans_type = 5
-ease_type = 2
-tween_duration = 0.5
-metadata/_custom_type_script = "uid://cv1tqomq6d35i"
-
-[node name="Mouse" type="Sprite2D" parent="." unique_id=991308480]
-z_index = 1
-position = Vector2(-8, -124)
-scale = Vector2(4, 4)
-texture = ExtResource("3_m1c35")
-
-[node name="Rotate" type="Node" parent="Mouse" unique_id=821846203 node_paths=PackedStringArray("affected_node")]
-script = ExtResource("2_4l27e")
-affected_node = NodePath("..")
-start_position = Vector2(5, inf)
-end_position = Vector2(-5, inf)
-start_rotation = 15.0
-end_rotation = -5.0
-loop = true
-autostart = true
-trans_type = 1
-ease_type = 2
-metadata/_custom_type_script = "uid://cv1tqomq6d35i"
-
 [node name="ColorRect" type="ColorRect" parent="." unique_id=954733009]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -81,3 +142,11 @@ end_modulate = Color(1, 1, 1, 0)
 trans_type = 5
 ease_type = 2
 metadata/_custom_type_script = "uid://cv1tqomq6d35i"
+
+[node name="IntroScreen" type="Sprite2D" parent="." unique_id=1980782012]
+texture = ExtResource("3_almnl")
+hframes = 3
+vframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=981673901]
+libraries/ = SubResource("AnimationLibrary_msnbl")

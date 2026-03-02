@@ -1,10 +1,12 @@
 class_name EldritchInstructionScreen extends Node2D
 @onready var dissapear: Node2DEffect = $Dissapear
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
 func _ready() -> void:
 	get_tree().paused = true
-	await get_tree().create_timer(1.5).timeout
+	animation_player.play("intro")
+	await animation_player.animation_finished
 	do_introduction()
 
 
