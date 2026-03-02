@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bvuvngqyv3pri"]
+
+[ext_resource type="Script" uid="uid://do6e1akw7log3" path="res://Movment.gd" id="1_glv2v"]
+[ext_resource type="Texture2D" uid="uid://r1p3ffxi22fl" path="res://DqUZ4omV4AAFVd_.jpeg" id="2_uu6xs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glv2v"]
+size = Vector2(40, 20)
+
+[sub_resource type="GDScript" id="GDScript_uu6xs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxg2q"]
+size = Vector2(1148.5, 35)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_glv2v"]
+radius = 20.0
+height = 82.0
+
+[node name="Node2D" type="Node2D" unique_id=979912781]
+
+[node name="Ribbon_Seal" type="RigidBody2D" parent="." unique_id=1386532396]
+position = Vector2(121, 72)
+script = ExtResource("1_glv2v")
+
+[node name="RayCast2D" type="RayCast2D" parent="Ribbon_Seal" unique_id=756546574]
+position = Vector2(-98, 438)
+target_position = Vector2(0, 9)
+
+[node name="RibbonSeal" type="CollisionShape2D" parent="Ribbon_Seal" unique_id=1568439264]
+position = Vector2(-98, 437)
+shape = SubResource("RectangleShape2D_glv2v")
+
+[node name="Seal_Sprite" type="Sprite2D" parent="Ribbon_Seal" unique_id=1299368991]
+position = Vector2(-99.05077, 437.8262)
+scale = Vector2(0.03632576, 0.025002755)
+texture = ExtResource("2_uu6xs")
+script = SubResource("GDScript_uu6xs")
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1566242528]
+position = Vector2(15, 333)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=305927396]
+position = Vector2(558.75, 204.5)
+shape = SubResource("RectangleShape2D_rxg2q")
+
+[node name="Ocean" type="Area2D" parent="." unique_id=2105644958]
+
+[node name="Watah" type="CollisionShape2D" parent="Ocean" unique_id=1892697819]
+position = Vector2(1124, 482)
+shape = SubResource("CapsuleShape2D_glv2v")
+debug_color = Color(0.99999994, 0.0103484, 0.060341723, 0.41960785)

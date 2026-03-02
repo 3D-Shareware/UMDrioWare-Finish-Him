@@ -1,0 +1,189 @@
+[gd_scene format=3 uid="uid://cnxouep17r1xd"]
+
+[ext_resource type="Script" uid="uid://c6eh8onw5ue8w" path="res://Start_overlay.gd" id="1_n4gs6"]
+[ext_resource type="Texture2D" uid="uid://b4p85e0sowqy3" path="res://Assets/5c3310aec77068e24844c663aa62b37c.jpg" id="1_nqnh2"]
+[ext_resource type="Texture2D" uid="uid://c7bx23xfbflmr" path="res://Assets/ribbon.png" id="2_vlgeb"]
+[ext_resource type="Texture2D" uid="uid://bxntdc1warmdt" path="res://Assets/Space.png" id="3_n4gs6"]
+[ext_resource type="Texture2D" uid="uid://vcv84i7dyepx" path="res://Assets/Shift.png" id="4_e121d"]
+[ext_resource type="Texture2D" uid="uid://wwk2aw1v4wrq" path="res://Assets/Plus.png" id="5_7631i"]
+[ext_resource type="Texture2D" uid="uid://cseltfblp4efm" path="res://Assets/Arrow.png" id="6_vb0mi"]
+[ext_resource type="Texture2D" uid="uid://bun56x1udu53w" path="res://Assets/Flag.png" id="7_27g8h"]
+[ext_resource type="Texture2D" uid="uid://bmfoxv35rdvtr" path="res://Assets/official.png" id="8_lf3kh"]
+[ext_resource type="FontFile" uid="uid://xf35mpj43a2s" path="res://Assets/ShapeBitRegular-VGZvl.otf" id="9_vlgeb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n4gs6"]
+font = ExtResource("9_vlgeb")
+font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_e121d"]
+font = ExtResource("9_vlgeb")
+font_size = 50
+
+[node name="StartOverlay" type="CanvasLayer" unique_id=969991500]
+script = ExtResource("1_n4gs6")
+
+[node name="Instructions" type="Control" parent="." unique_id=808036003]
+layout_mode = 3
+anchor_top = -1.0580001
+anchor_right = 1.0
+anchor_bottom = -0.041
+offset_top = -0.35986328
+offset_right = -8.0
+offset_bottom = 0.2800026
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Instructions" unique_id=854826416]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11800001
+anchor_top = 0.14600001
+anchor_right = 0.89100003
+anchor_bottom = 0.87900007
+offset_left = 2.0299835
+offset_top = -50.11801
+offset_right = 1.7349854
+offset_bottom = -49.957092
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1452662, 0.1452662, 0.1452662, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Instructions/ColorRect" unique_id=1043307580]
+modulate = Color(1, 1, 1, 0.043137256)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.99700004
+offset_left = 2.0
+offset_top = 0.6640625
+offset_right = 0.67297363
+offset_bottom = 0.35327148
+texture = ExtResource("1_nqnh2")
+
+[node name="TextureRect2" type="TextureRect" parent="Instructions/ColorRect" unique_id=1133335017]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.448
+anchor_right = 0.55200005
+anchor_bottom = 0.119
+offset_left = -312.6471
+offset_top = 213.66406
+offset_right = -219.93304
+offset_bottom = 274.4465
+grow_horizontal = 2
+texture = ExtResource("2_vlgeb")
+
+[node name="TextureRect3" type="TextureRect" parent="Instructions/ColorRect" unique_id=705040797]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.021000002
+anchor_bottom = 0.037
+offset_left = 281.0
+offset_top = 420.0
+offset_right = 406.80597
+offset_bottom = 444.781
+texture = ExtResource("3_n4gs6")
+
+[node name="TextureRect4" type="TextureRect" parent="Instructions/ColorRect" unique_id=1816310258]
+layout_mode = 0
+offset_left = 527.0
+offset_top = 401.0
+offset_right = 685.0
+offset_bottom = 473.0
+texture = ExtResource("4_e121d")
+
+[node name="TextureRect5" type="TextureRect" parent="Instructions/ColorRect" unique_id=1770997066]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 427.0
+offset_right = 515.0
+offset_bottom = 468.0
+texture = ExtResource("5_7631i")
+
+[node name="TextureRect6" type="TextureRect" parent="Instructions/ColorRect" unique_id=1658905780]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -58.0
+offset_top = 240.0
+offset_right = 231.0
+offset_bottom = 370.0
+grow_horizontal = 2
+texture = ExtResource("6_vb0mi")
+
+[node name="TextureRect7" type="TextureRect" parent="Instructions/ColorRect" unique_id=610895427]
+layout_mode = 0
+offset_left = 972.0
+offset_top = 59.0
+offset_right = 1154.0
+offset_bottom = 444.0
+texture = ExtResource("7_27g8h")
+
+[node name="TextureRect8" type="TextureRect" parent="Instructions/ColorRect" unique_id=93651100]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 500.0
+offset_right = 612.0
+offset_bottom = 720.0
+texture = ExtResource("8_lf3kh")
+
+[node name="TextureRect10" type="TextureRect" parent="Instructions/ColorRect" unique_id=96244544]
+layout_mode = 0
+offset_left = 658.0
+offset_top = 553.0
+offset_right = 947.0
+offset_bottom = 683.0
+texture = ExtResource("6_vb0mi")
+
+[node name="TextureRect11" type="TextureRect" parent="Instructions/ColorRect" unique_id=1688502348]
+layout_mode = 0
+offset_left = 971.0
+offset_top = 374.0
+offset_right = 1153.0
+offset_bottom = 759.0
+texture = ExtResource("7_27g8h")
+
+[node name="Label" type="Label" parent="Instructions" unique_id=2146906305]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.007310705
+anchor_top = 0.13573407
+anchor_right = 0.007310705
+anchor_bottom = 0.13573407
+offset_left = 2.0
+offset_top = -50.0
+offset_right = 1914.0
+offset_bottom = 163.0
+text = "Press Space to Start!"
+label_settings = SubResource("LabelSettings_n4gs6")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="Instructions" unique_id=597330245]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.01, 1.01)
+
+[node name="CountdownLabel" type="Label" parent="." unique_id=1966618000]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.5
+offset_top = -33.5
+offset_right = 6.5
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_e121d")
+metadata/_edit_use_anchors_ = true
