@@ -5,7 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://ci8hcwd6qs4nv" path="res://Frameworks(YourStuff)/EldritchGame/EldritchGameMain/planet_switcher.tscn" id="3_pd8i2"]
 [ext_resource type="PackedScene" uid="uid://cd6d6c3cl3n5o" path="res://Frameworks(YourStuff)/EldritchGame/BigGuy/monsta.tscn" id="4_eq008"]
 [ext_resource type="Texture2D" uid="uid://pmpicwb1aeej" path="res://Frameworks(YourStuff)/EldritchGame/Assets/Hunger_Bar.png" id="4_uniig"]
+[ext_resource type="Script" uid="uid://cv1tqomq6d35i" path="res://Frameworks(YourStuff)/EldritchGame/Effect Components/Scripts/Effects/node2D_effect.gd" id="5_cdutq"]
 [ext_resource type="Texture2D" uid="uid://kqkn6l23kluo" path="res://Frameworks(YourStuff)/EldritchGame/Assets/bar_fill_in.png" id="5_uniig"]
+[ext_resource type="Texture2D" uid="uid://csdwa1bgxoebb" path="res://Frameworks(YourStuff)/EldritchGame/Assets/back_background.png" id="6_4qemp"]
 [ext_resource type="PackedScene" uid="uid://ptsg4si05tkq" path="res://Frameworks(YourStuff)/EldritchGame/Music/AdaptiveMusic/eldritch_adaptive_music.tscn" id="6_uniig"]
 [ext_resource type="Texture2D" uid="uid://bqjc2k8mryr88" path="res://Frameworks(YourStuff)/EldritchGame/Assets/Galaxy.png" id="7_io5bt"]
 [ext_resource type="Texture2D" uid="uid://b1aaiyqwwnxjx" path="res://Frameworks(YourStuff)/EldritchGame/Assets/Good_Planet1.png" id="8_pn0qa"]
@@ -15,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bh166ecxqy5qu" path="res://Frameworks(YourStuff)/EldritchGame/Instructions/introduction_screen.tscn" id="12_thfao"]
 [ext_resource type="PackedScene" uid="uid://c0yej11t1qghx" path="res://Frameworks(YourStuff)/EldritchGame/EndingScreen/ending_screen.tscn" id="13_pd8i2"]
 
-[sub_resource type="Curve2D" id="Curve2D_cv843"]
+[sub_resource type="Curve2D" id="Curve2D_cdutq"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 330, 23, 0, 0, 0, 0, -35, 26, 0, 0, 0, 0, -163, 24, 0, 0, 0, 0, -255, 72, 0, 0, 0, 0, -238, 119, 0, 0, 0, 0, -159, 154, 0, 0, 0, 0, -26, 162, 0, 0, 0, 0, 330, 161, 0, 0, 0, 0, 470, 115, 0, 0, 0, 0, 462, 62, 0, 0, 0, 0, 330, 23)
@@ -29,7 +31,7 @@ script = ExtResource("1_ayi0r")
 [node name="ParticlePathing" parent="." unique_id=248845500 instance=ExtResource("2_yw6km")]
 position = Vector2(440, 304)
 scale = Vector2(1.325, 1.325)
-curve = SubResource("Curve2D_cv843")
+curve = SubResource("Curve2D_cdutq")
 planets_to_spawn = Array[bool]([true, true, false, true, true, false, true, true, false, true, true, false])
 
 [node name="PlanetSwitcher" parent="." unique_id=1189403418 instance=ExtResource("3_pd8i2")]
@@ -40,8 +42,20 @@ position = Vector2(570, -475)
 [node name="Monsta" parent="." unique_id=161056806 groups=["Monsta"] instance=ExtResource("4_eq008")]
 position = Vector2(584, 280)
 
-[node name="Timer" type="Timer" parent="." unique_id=21950408]
+[node name="Float" type="Node" parent="Monsta" unique_id=2121215881 node_paths=PackedStringArray("affected_node")]
+script = ExtResource("5_cdutq")
+affected_node = NodePath("..")
+end_position = Vector2(inf, 300)
+loop = true
 autostart = true
+trans_type = 7
+ease_type = 2
+tween_duration = 2.0
+metadata/_custom_type_script = "uid://cv1tqomq6d35i"
+
+[node name="Timer" type="Timer" parent="." unique_id=21950408]
+wait_time = 20.0
+one_shot = true
 
 [node name="HungerBar" type="TextureProgressBar" parent="." unique_id=1612062468]
 z_index = 5
@@ -49,7 +63,9 @@ offset_left = 136.0
 offset_top = 520.0
 offset_right = 1036.0
 offset_bottom = 670.0
+value = 10.0
 nine_patch_stretch = true
+texture_under = ExtResource("6_4qemp")
 texture_over = ExtResource("4_uniig")
 texture_progress = ExtResource("5_uniig")
 
@@ -62,10 +78,10 @@ texture = ExtResource("7_io5bt")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=130794795]
 process_mode = 3
-offset_left = 1000.0
-offset_top = 512.0
-offset_right = 1135.0
-offset_bottom = 647.0
+offset_left = 987.0
+offset_top = 484.0
+offset_right = 1122.0
+offset_bottom = 619.0
 fill_mode = 5
 nine_patch_stretch = true
 texture_under = ExtResource("9_thfao")
@@ -97,11 +113,14 @@ tween_duration = 0.1
 metadata/_custom_type_script = "uid://c0eq70gyg7rhf"
 
 [node name="IntroductionScreen" parent="." unique_id=773554877 instance=ExtResource("12_thfao")]
+visible = false
 z_index = 8
 position = Vector2(576, 320)
 
 [node name="EndingScreen" parent="." unique_id=320439500 instance=ExtResource("13_pd8i2")]
 z_index = 10
 position = Vector2(576, 320)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
 [editable path="PlanetSwitcher"]

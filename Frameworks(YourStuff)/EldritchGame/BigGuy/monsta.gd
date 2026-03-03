@@ -8,9 +8,11 @@ signal good_planet_eaten(hit_was_good : bool)
 @onready var clap: AudioStreamPlayer = $Clap
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
+
 var adaptive_music : EldritchAdaptiveMusic
 
 func _ready() -> void:
+
 	adaptive_music = get_tree().get_first_node_in_group("EldritchAdaptiveMusic")
 	eating_zone.planet_suck.connect(suck_in_planet)
 
