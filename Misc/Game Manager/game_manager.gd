@@ -27,12 +27,12 @@ const MIX_PAINT_JUDE_ = preload("res://Frameworks(YourStuff)/Jude/MixColors/MixP
 const EXAMPLE_SCENE_MUSIC = preload("res://ProoblesToys(PolishTools)/Music/ExampleSceneMusic.tscn")
 const PONG = preload("res://Frameworks(YourStuff)/Pong;)/scenes/main.tscn")
 const PLANET_GAME = preload("res://Frameworks(YourStuff)/EldritchGame/EldritchGameMain/planet_game.tscn")
+const SCARY_GAME = preload("res://Frameworks(YourStuff)/Scary_Music_Jam/Main/Main.tscn")
 
-<<<<<<< main
-var all_games : Array[PackedScene] = [FINISH_HIM, REPAIR, SWAT]
-=======
-var all_games : Array[PackedScene] = [PLANET_GAME,PONG,VANDALISM_JUDE_,ROCK_SKIP,TYSON,FINISH_HIM,MIX_PAINT_JUDE_]
->>>>>>> main
+
+#var all_games : Array[PackedScene] = [FINISH_HIM, REPAIR, SWAT]
+var all_games : Array[PackedScene] = [PLANET_GAME,PONG,VANDALISM_JUDE_,ROCK_SKIP,TYSON,FINISH_HIM,MIX_PAINT_JUDE_, SCARY_GAME]
+
 
 ## List of games left to play this stage before time scale increases
 var games_to_play_this_stage : Array[PackedScene]
