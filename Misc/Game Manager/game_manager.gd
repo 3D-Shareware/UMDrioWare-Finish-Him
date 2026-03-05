@@ -1,6 +1,7 @@
 class_name GameManager extends Node
 
 const COVERUP = preload("res://Misc/Transitions/coverup/coverup.tscn")
+const HALL_OF_GAMES = preload("res://Misc/HallOfGames/hall_of_games.tscn")
 
 @onready var start_point: Marker2D = $StartPoint
 @onready var play_point: Marker2D = $PlayPoint
@@ -72,7 +73,7 @@ func start_games(game : PackedScene = null):
 	
 	lives = 3
 	score = 0
-	games_to_play_this_stage = all_games.duplicate()
+	games_to_play_this_stage = mix.duplicate()
 	switch_scene('won', false) ##TODO make a start scene
 	global_ui_container.set_lives(lives)
 
@@ -85,7 +86,7 @@ func _on_game_ended(won : bool):
 		lives -= 1
 		if lives <= 0:
 			Director.highscore = score
-			print('lost')
+			games_to_play_this_stage = [HALL_OF_GAMES]
 		global_ui_container.set_lives(lives)
 	
 	global_ui_container.show_win_status(won)
