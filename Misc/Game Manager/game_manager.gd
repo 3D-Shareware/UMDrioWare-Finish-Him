@@ -21,12 +21,18 @@ const TROLLEY_MAIN_SCENE = preload("res://Frameworks(YourStuff)/TrolleyProblem/t
 const ROCK_SKIP = preload("res://Frameworks(YourStuff)/rock-skpping/ww_game.tscn")
 const TYSON = preload("res://Frameworks(YourStuff)/Connor/main.tscn")
 const FINISH_HIM = preload("res://Frameworks(YourStuff)/Kevin/FinishHim/scenes/game_container.tscn")
+const REPAIR = preload("res://Frameworks(YourStuff)/Kevin/Repair/scenes/game_container.tscn")
+const SWAT = preload("res://Frameworks(YourStuff)/Kevin/Swat/scenes/game.tscn")
 const MIX_PAINT_JUDE_ = preload("res://Frameworks(YourStuff)/Jude/MixColors/MixPaint(Jude).tscn")
 const EXAMPLE_SCENE_MUSIC = preload("res://ProoblesToys(PolishTools)/Music/ExampleSceneMusic.tscn")
 const PONG = preload("res://Frameworks(YourStuff)/Pong;)/scenes/main.tscn")
 const PLANET_GAME = preload("res://Frameworks(YourStuff)/EldritchGame/EldritchGameMain/planet_game.tscn")
 
+<<<<<<< main
+var all_games : Array[PackedScene] = [FINISH_HIM, REPAIR, SWAT]
+=======
 var all_games : Array[PackedScene] = [PLANET_GAME,PONG,VANDALISM_JUDE_,ROCK_SKIP,TYSON,FINISH_HIM,MIX_PAINT_JUDE_]
+>>>>>>> main
 
 ## List of games left to play this stage before time scale increases
 var games_to_play_this_stage : Array[PackedScene]
