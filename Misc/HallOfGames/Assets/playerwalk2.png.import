@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpe13fghb3ybc"
-path="res://.godot/imported/mixpaint.png-acb8e4a8608b274f9d3b95796a7b3a22.ctex"
+uid="uid://cnekhppfxd445"
+path="res://.godot/imported/playerwalk2.png-036bf11d80c60bc63df5597bdbe47615.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Misc/BaseGameAssets/GameThumbnails/mixpaint.png"
-dest_files=["res://.godot/imported/mixpaint.png-acb8e4a8608b274f9d3b95796a7b3a22.ctex"]
+source_file="res://Misc/HallOfGames/Assets/playerwalk2.png"
+dest_files=["res://.godot/imported/playerwalk2.png-036bf11d80c60bc63df5597bdbe47615.ctex"]
 
 [params]
 

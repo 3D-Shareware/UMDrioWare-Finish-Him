@@ -1,14 +1,28 @@
 [gd_scene format=3 uid="uid://c0ya2pqnfbx1l"]
 
 [ext_resource type="Script" uid="uid://t886as704gvv" path="res://Misc/HallOfGames/hall_of_games.gd" id="1_hnllp"]
-[ext_resource type="Texture2D" uid="uid://c8okkqic57sjw" path="res://Misc/BaseGameAssets/GameThumbnails/baseplate.png" id="2_dm7o2"]
+[ext_resource type="Texture2D" uid="uid://c8okkqic57sjw" path="res://Misc/HallOfGames/Assets/GameThumbnails/baseplate.png" id="2_dm7o2"]
 [ext_resource type="PackedScene" uid="uid://c14bvnum1utwo" path="res://Misc/HallOfGames/door.tscn" id="3_kfup3"]
 [ext_resource type="Texture2D" uid="uid://b2y486ghkxb8e" path="res://Misc/HallOfGames/Assets/bigdoor.png" id="4_a3agb"]
 [ext_resource type="PackedScene" uid="uid://hfmyppw6hg22" path="res://Misc/HallOfGames/gamer_tag.tscn" id="5_dxurm"]
 [ext_resource type="Texture2D" uid="uid://ch6pcfyhb3ybe" path="res://Misc/HallOfGames/Assets/flatjude.png" id="5_ruw4v"]
+[ext_resource type="Script" uid="uid://bei86e37xtwac" path="res://Misc/HallOfGames/camera_2d.gd" id="6_hd6uv"]
+[ext_resource type="Texture2D" uid="uid://cx51rxppgs7pw" path="res://Misc/HallOfGames/Assets/GameThumbnails/finishhim.png" id="6_yfor6"]
+[ext_resource type="Texture2D" uid="uid://d4id0xmvb5b6f" path="res://Misc/HallOfGames/Assets/GameThumbnails/mall.png" id="7_bxy5t"]
+[ext_resource type="PackedScene" uid="uid://dqxes2rgafctr" path="res://Misc/HallOfGames/prooble/newproob.tscn" id="8_5dnqa"]
+[ext_resource type="Texture2D" uid="uid://dpe13fghb3ybc" path="res://Misc/HallOfGames/Assets/GameThumbnails/mixpaint.png" id="8_bpkln"]
+[ext_resource type="Texture2D" uid="uid://c1mpksocukcfw" path="res://Misc/HallOfGames/Assets/GameThumbnails/planeteater.png" id="9_uslha"]
+[ext_resource type="Texture2D" uid="uid://cey1t22r3cbiu" path="res://Misc/HallOfGames/Assets/GameThumbnails/pong.png" id="10_uxgyb"]
+[ext_resource type="Texture2D" uid="uid://c6vg16476ips" path="res://Misc/HallOfGames/Assets/GameThumbnails/Repair.png" id="11_3yisg"]
+[ext_resource type="Texture2D" uid="uid://cfhir3rc5ty0r" path="res://Misc/HallOfGames/Assets/GameThumbnails/rockskip.png" id="12_ap2xa"]
+[ext_resource type="Texture2D" uid="uid://cj7obqsfkosy2" path="res://Misc/HallOfGames/Assets/GameThumbnails/swat.png" id="13_jfl8v"]
+[ext_resource type="Texture2D" uid="uid://blblyks6mmje7" path="res://Misc/HallOfGames/Assets/GameThumbnails/tyson.png" id="14_p3cm8"]
+[ext_resource type="Texture2D" uid="uid://cgavkgl8jafjp" path="res://Misc/HallOfGames/Assets/GameThumbnails/scary.png" id="15_bpkln"]
+[ext_resource type="Texture2D" uid="uid://cettwqm86qww7" path="res://Misc/HallOfGames/Assets/GameThumbnails/seal.png" id="16_uslha"]
+[ext_resource type="Script" uid="uid://dxt8t8cmh2gml" path="res://Misc/HallOfGames/door.gd" id="19_uslha"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hnllp"]
-size = Vector2(4538, 120.5)
+size = Vector2(9203.5, 120.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dm7o2"]
 size = Vector2(76, 633.5)
@@ -19,17 +33,20 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_a3agb"]
 gradient = SubResource("Gradient_t2eey")
 
-[node name="HallOfGames" type="Node2D" unique_id=546685051]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uslha"]
+size = Vector2(198, 372)
+
+[node name="HallOfGames" type="Node2D" unique_id=546685051 groups=["HallOfGames"]]
 script = ExtResource("1_hnllp")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=443401365]
 
 [node name="Horizontal" type="CollisionShape2D" parent="StaticBody2D" unique_id=41083241]
-position = Vector2(2259, 665)
+position = Vector2(4359.5, 665)
 shape = SubResource("RectangleShape2D_hnllp")
 
 [node name="Horizontal2" type="CollisionShape2D" parent="StaticBody2D" unique_id=377731786]
-position = Vector2(2259, 52.75)
+position = Vector2(4279.25, 52.75)
 shape = SubResource("RectangleShape2D_hnllp")
 
 [node name="Vertical" type="CollisionShape2D" parent="StaticBody2D" unique_id=1673876029]
@@ -37,22 +54,22 @@ position = Vector2(28, 309.25)
 shape = SubResource("RectangleShape2D_dm7o2")
 
 [node name="Vertical2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1241070913]
-position = Vector2(4493, 309.25)
+position = Vector2(8884, 309.25)
 shape = SubResource("RectangleShape2D_dm7o2")
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D" unique_id=926377402]
 color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(-4, 8, 2, 115, 4521, 118, 4513, -29)
+polygon = PackedVector2Array(-336, 22, -333, 113, -78.04117, 110.55632, -14, 622, 70, 612, 120.70126, 113.1013, 9035, 120, 9006, -42)
 
 [node name="Polygon2D2" type="Polygon2D" parent="StaticBody2D" unique_id=261656241]
 position = Vector2(0, 602)
 color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(-4, 8, 2, 115, 4521, 118, 4513, -29)
+polygon = PackedVector2Array(-195, 7, -198, 129, 8979, 123, 8984, -1)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1393284911]
 z_index = -12
-position = Vector2(2228.5, 624.0001)
-scale = Vector2(110.796875, 48.468754)
+position = Vector2(3954, 477.50003)
+scale = Vector2(164.71875, 43.890625)
 texture = SubResource("GradientTexture2D_a3agb")
 metadata/_edit_lock_ = true
 
@@ -83,13 +100,7 @@ position = Vector2(194, 323)
 [node name="GamerTag" parent="Games/BasePlate" unique_id=1690713788 instance=ExtResource("5_dxurm")]
 
 [node name="Vandalism" type="Node2D" parent="Games" unique_id=1912890229]
-position = Vector2(1212, 193)
-
-[node name="Flatjude" type="Sprite2D" parent="Games/Vandalism" unique_id=1638898562]
-position = Vector2(333, 402)
-scale = Vector2(1.2243928, 1.2243928)
-texture = ExtResource("5_ruw4v")
-offset = Vector2(4.083618, -63.705048)
+position = Vector2(1772, 193)
 
 [node name="Polygon2D" type="Polygon2D" parent="Games/Vandalism" unique_id=1562956972]
 z_index = -1
@@ -99,21 +110,13 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-653.80444, -296.42834, -551.3013, -362.91696, -144.0586, -351.8355, 290.88745, -357.37622, 581.77515, -360.1466, 623.3308, -271.49512, 615.0198, -135.74756, 601.1677, 265.9544, 598.3972, 360.1466, 440.48706, 379.53906, 102.503174, 362.91687, -113.58472, 376.76868, -343.5244, 376.76868, -573.4641, 379.53906, -634.4121, 274.2655, -642.72314, 96.962524, -648.2639, -180.0733)
 
 [node name="Baseplate" type="Sprite2D" parent="Games/Vandalism/Polygon2D" unique_id=880947356]
-texture = ExtResource("2_dm7o2")
+texture = ExtResource("6_yfor6")
 
 [node name="Door2" parent="Games/Vandalism" unique_id=1470802112 instance=ExtResource("3_kfup3")]
 position = Vector2(194, 323)
 
-[node name="GamerTag" parent="Games/Vandalism" unique_id=77871204 instance=ExtResource("5_dxurm")]
-
 [node name="TrickTape" type="Node2D" parent="Games" unique_id=1895500436]
-position = Vector2(1212, 193)
-
-[node name="Flatjude" type="Sprite2D" parent="Games/TrickTape" unique_id=648580599]
-position = Vector2(333, 402)
-scale = Vector2(1.2243928, 1.2243928)
-texture = ExtResource("5_ruw4v")
-offset = Vector2(4.083618, -63.705048)
+position = Vector2(2319, 193)
 
 [node name="Polygon2D" type="Polygon2D" parent="Games/TrickTape" unique_id=364541352]
 z_index = -1
@@ -123,21 +126,13 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-653.80444, -296.42834, -551.3013, -362.91696, -144.0586, -351.8355, 290.88745, -357.37622, 581.77515, -360.1466, 623.3308, -271.49512, 615.0198, -135.74756, 601.1677, 265.9544, 598.3972, 360.1466, 440.48706, 379.53906, 102.503174, 362.91687, -113.58472, 376.76868, -343.5244, 376.76868, -573.4641, 379.53906, -634.4121, 274.2655, -642.72314, 96.962524, -648.2639, -180.0733)
 
 [node name="Baseplate" type="Sprite2D" parent="Games/TrickTape/Polygon2D" unique_id=455942955]
-texture = ExtResource("2_dm7o2")
+texture = ExtResource("7_bxy5t")
 
 [node name="Door2" parent="Games/TrickTape" unique_id=2123463526 instance=ExtResource("3_kfup3")]
 position = Vector2(194, 323)
 
-[node name="GamerTag" parent="Games/TrickTape" unique_id=474557969 instance=ExtResource("5_dxurm")]
-
 [node name="Trolley" type="Node2D" parent="Games" unique_id=1064873953]
-position = Vector2(1212, 193)
-
-[node name="Flatjude" type="Sprite2D" parent="Games/Trolley" unique_id=957193714]
-position = Vector2(333, 402)
-scale = Vector2(1.2243928, 1.2243928)
-texture = ExtResource("5_ruw4v")
-offset = Vector2(4.083618, -63.705048)
+position = Vector2(2866, 193)
 
 [node name="Polygon2D" type="Polygon2D" parent="Games/Trolley" unique_id=1777691331]
 z_index = -1
@@ -147,21 +142,13 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-653.80444, -296.42834, -551.3013, -362.91696, -144.0586, -351.8355, 290.88745, -357.37622, 581.77515, -360.1466, 623.3308, -271.49512, 615.0198, -135.74756, 601.1677, 265.9544, 598.3972, 360.1466, 440.48706, 379.53906, 102.503174, 362.91687, -113.58472, 376.76868, -343.5244, 376.76868, -573.4641, 379.53906, -634.4121, 274.2655, -642.72314, 96.962524, -648.2639, -180.0733)
 
 [node name="Baseplate" type="Sprite2D" parent="Games/Trolley/Polygon2D" unique_id=1106766158]
-texture = ExtResource("2_dm7o2")
+texture = ExtResource("8_bpkln")
 
 [node name="Door2" parent="Games/Trolley" unique_id=959568395 instance=ExtResource("3_kfup3")]
 position = Vector2(194, 323)
 
-[node name="GamerTag" parent="Games/Trolley" unique_id=1285655425 instance=ExtResource("5_dxurm")]
-
 [node name="RockSkip" type="Node2D" parent="Games" unique_id=1135337622]
-position = Vector2(1212, 193)
-
-[node name="Flatjude" type="Sprite2D" parent="Games/RockSkip" unique_id=1029521160]
-position = Vector2(333, 402)
-scale = Vector2(1.2243928, 1.2243928)
-texture = ExtResource("5_ruw4v")
-offset = Vector2(4.083618, -63.705048)
+position = Vector2(3399, 193)
 
 [node name="Polygon2D" type="Polygon2D" parent="Games/RockSkip" unique_id=986541417]
 z_index = -1
@@ -171,21 +158,13 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-653.80444, -296.42834, -551.3013, -362.91696, -144.0586, -351.8355, 290.88745, -357.37622, 581.77515, -360.1466, 623.3308, -271.49512, 615.0198, -135.74756, 601.1677, 265.9544, 598.3972, 360.1466, 440.48706, 379.53906, 102.503174, 362.91687, -113.58472, 376.76868, -343.5244, 376.76868, -573.4641, 379.53906, -634.4121, 274.2655, -642.72314, 96.962524, -648.2639, -180.0733)
 
 [node name="Baseplate" type="Sprite2D" parent="Games/RockSkip/Polygon2D" unique_id=65956933]
-texture = ExtResource("2_dm7o2")
+texture = ExtResource("9_uslha")
 
 [node name="Door2" parent="Games/RockSkip" unique_id=843435442 instance=ExtResource("3_kfup3")]
 position = Vector2(194, 323)
 
-[node name="GamerTag" parent="Games/RockSkip" unique_id=1161305823 instance=ExtResource("5_dxurm")]
-
 [node name="Tyson" type="Node2D" parent="Games" unique_id=1511639183]
-position = Vector2(1212, 193)
-
-[node name="Flatjude" type="Sprite2D" parent="Games/Tyson" unique_id=887119325]
-position = Vector2(333, 402)
-scale = Vector2(1.2243928, 1.2243928)
-texture = ExtResource("5_ruw4v")
-offset = Vector2(4.083618, -63.705048)
+position = Vector2(3978, 193)
 
 [node name="Polygon2D" type="Polygon2D" parent="Games/Tyson" unique_id=1878641114]
 z_index = -1
@@ -195,21 +174,13 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-653.80444, -296.42834, -551.3013, -362.91696, -144.0586, -351.8355, 290.88745, -357.37622, 581.77515, -360.1466, 623.3308, -271.49512, 615.0198, -135.74756, 601.1677, 265.9544, 598.3972, 360.1466, 440.48706, 379.53906, 102.503174, 362.91687, -113.58472, 376.76868, -343.5244, 376.76868, -573.4641, 379.53906, -634.4121, 274.2655, -642.72314, 96.962524, -648.2639, -180.0733)
 
 [node name="Baseplate" type="Sprite2D" parent="Games/Tyson/Polygon2D" unique_id=169263230]
-texture = ExtResource("2_dm7o2")
+texture = ExtResource("10_uxgyb")
 
 [node name="Door2" parent="Games/Tyson" unique_id=56273488 instance=ExtResource("3_kfup3")]
 position = Vector2(194, 323)
 
-[node name="GamerTag" parent="Games/Tyson" unique_id=43793948 instance=ExtResource("5_dxurm")]
-
 [node name="Tyson2" type="Node2D" parent="Games" unique_id=1440982448]
-position = Vector2(1212, 193)
-
-[node name="Flatjude" type="Sprite2D" parent="Games/Tyson2" unique_id=1535856852]
-position = Vector2(333, 402)
-scale = Vector2(1.2243928, 1.2243928)
-texture = ExtResource("5_ruw4v")
-offset = Vector2(4.083618, -63.705048)
+position = Vector2(4511, 193)
 
 [node name="Polygon2D" type="Polygon2D" parent="Games/Tyson2" unique_id=595567364]
 z_index = -1
@@ -219,21 +190,13 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-653.80444, -296.42834, -551.3013, -362.91696, -144.0586, -351.8355, 290.88745, -357.37622, 581.77515, -360.1466, 623.3308, -271.49512, 615.0198, -135.74756, 601.1677, 265.9544, 598.3972, 360.1466, 440.48706, 379.53906, 102.503174, 362.91687, -113.58472, 376.76868, -343.5244, 376.76868, -573.4641, 379.53906, -634.4121, 274.2655, -642.72314, 96.962524, -648.2639, -180.0733)
 
 [node name="Baseplate" type="Sprite2D" parent="Games/Tyson2/Polygon2D" unique_id=471092690]
-texture = ExtResource("2_dm7o2")
+texture = ExtResource("11_3yisg")
 
 [node name="Door2" parent="Games/Tyson2" unique_id=1683781353 instance=ExtResource("3_kfup3")]
 position = Vector2(194, 323)
 
-[node name="GamerTag" parent="Games/Tyson2" unique_id=1998672766 instance=ExtResource("5_dxurm")]
-
 [node name="Repair" type="Node2D" parent="Games" unique_id=879163841]
-position = Vector2(1212, 193)
-
-[node name="Flatjude" type="Sprite2D" parent="Games/Repair" unique_id=2051811539]
-position = Vector2(333, 402)
-scale = Vector2(1.2243928, 1.2243928)
-texture = ExtResource("5_ruw4v")
-offset = Vector2(4.083618, -63.705048)
+position = Vector2(5053, 193)
 
 [node name="Polygon2D" type="Polygon2D" parent="Games/Repair" unique_id=138486949]
 z_index = -1
@@ -243,21 +206,13 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-653.80444, -296.42834, -551.3013, -362.91696, -144.0586, -351.8355, 290.88745, -357.37622, 581.77515, -360.1466, 623.3308, -271.49512, 615.0198, -135.74756, 601.1677, 265.9544, 598.3972, 360.1466, 440.48706, 379.53906, 102.503174, 362.91687, -113.58472, 376.76868, -343.5244, 376.76868, -573.4641, 379.53906, -634.4121, 274.2655, -642.72314, 96.962524, -648.2639, -180.0733)
 
 [node name="Baseplate" type="Sprite2D" parent="Games/Repair/Polygon2D" unique_id=473557951]
-texture = ExtResource("2_dm7o2")
+texture = ExtResource("12_ap2xa")
 
 [node name="Door2" parent="Games/Repair" unique_id=1527201193 instance=ExtResource("3_kfup3")]
 position = Vector2(194, 323)
 
-[node name="GamerTag" parent="Games/Repair" unique_id=140615221 instance=ExtResource("5_dxurm")]
-
 [node name="Swat" type="Node2D" parent="Games" unique_id=1312688061]
-position = Vector2(1212, 193)
-
-[node name="Flatjude" type="Sprite2D" parent="Games/Swat" unique_id=1474607193]
-position = Vector2(333, 402)
-scale = Vector2(1.2243928, 1.2243928)
-texture = ExtResource("5_ruw4v")
-offset = Vector2(4.083618, -63.705048)
+position = Vector2(5598, 193)
 
 [node name="Polygon2D" type="Polygon2D" parent="Games/Swat" unique_id=1634430772]
 z_index = -1
@@ -267,21 +222,13 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-653.80444, -296.42834, -551.3013, -362.91696, -144.0586, -351.8355, 290.88745, -357.37622, 581.77515, -360.1466, 623.3308, -271.49512, 615.0198, -135.74756, 601.1677, 265.9544, 598.3972, 360.1466, 440.48706, 379.53906, 102.503174, 362.91687, -113.58472, 376.76868, -343.5244, 376.76868, -573.4641, 379.53906, -634.4121, 274.2655, -642.72314, 96.962524, -648.2639, -180.0733)
 
 [node name="Baseplate" type="Sprite2D" parent="Games/Swat/Polygon2D" unique_id=1083631444]
-texture = ExtResource("2_dm7o2")
+texture = ExtResource("13_jfl8v")
 
 [node name="Door2" parent="Games/Swat" unique_id=1462176198 instance=ExtResource("3_kfup3")]
 position = Vector2(194, 323)
 
-[node name="GamerTag" parent="Games/Swat" unique_id=1300647936 instance=ExtResource("5_dxurm")]
-
 [node name="MixPaint" type="Node2D" parent="Games" unique_id=1755276252]
-position = Vector2(1212, 193)
-
-[node name="Flatjude" type="Sprite2D" parent="Games/MixPaint" unique_id=20950069]
-position = Vector2(333, 402)
-scale = Vector2(1.2243928, 1.2243928)
-texture = ExtResource("5_ruw4v")
-offset = Vector2(4.083618, -63.705048)
+position = Vector2(6116, 193)
 
 [node name="Polygon2D" type="Polygon2D" parent="Games/MixPaint" unique_id=314735084]
 z_index = -1
@@ -291,21 +238,13 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-653.80444, -296.42834, -551.3013, -362.91696, -144.0586, -351.8355, 290.88745, -357.37622, 581.77515, -360.1466, 623.3308, -271.49512, 615.0198, -135.74756, 601.1677, 265.9544, 598.3972, 360.1466, 440.48706, 379.53906, 102.503174, 362.91687, -113.58472, 376.76868, -343.5244, 376.76868, -573.4641, 379.53906, -634.4121, 274.2655, -642.72314, 96.962524, -648.2639, -180.0733)
 
 [node name="Baseplate" type="Sprite2D" parent="Games/MixPaint/Polygon2D" unique_id=1033583886]
-texture = ExtResource("2_dm7o2")
+texture = ExtResource("14_p3cm8")
 
 [node name="Door2" parent="Games/MixPaint" unique_id=775872831 instance=ExtResource("3_kfup3")]
 position = Vector2(194, 323)
 
-[node name="GamerTag" parent="Games/MixPaint" unique_id=1620785667 instance=ExtResource("5_dxurm")]
-
 [node name="Pong" type="Node2D" parent="Games" unique_id=243827607]
-position = Vector2(1212, 193)
-
-[node name="Flatjude" type="Sprite2D" parent="Games/Pong" unique_id=1250056966]
-position = Vector2(333, 402)
-scale = Vector2(1.2243928, 1.2243928)
-texture = ExtResource("5_ruw4v")
-offset = Vector2(4.083618, -63.705048)
+position = Vector2(6651, 193)
 
 [node name="Polygon2D" type="Polygon2D" parent="Games/Pong" unique_id=2126539869]
 z_index = -1
@@ -315,21 +254,13 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-653.80444, -296.42834, -551.3013, -362.91696, -144.0586, -351.8355, 290.88745, -357.37622, 581.77515, -360.1466, 623.3308, -271.49512, 615.0198, -135.74756, 601.1677, 265.9544, 598.3972, 360.1466, 440.48706, 379.53906, 102.503174, 362.91687, -113.58472, 376.76868, -343.5244, 376.76868, -573.4641, 379.53906, -634.4121, 274.2655, -642.72314, 96.962524, -648.2639, -180.0733)
 
 [node name="Baseplate" type="Sprite2D" parent="Games/Pong/Polygon2D" unique_id=2080568177]
-texture = ExtResource("2_dm7o2")
+texture = ExtResource("15_bpkln")
 
 [node name="Door2" parent="Games/Pong" unique_id=1264765428 instance=ExtResource("3_kfup3")]
 position = Vector2(194, 323)
 
-[node name="GamerTag" parent="Games/Pong" unique_id=977589008 instance=ExtResource("5_dxurm")]
-
 [node name="PlanetGame" type="Node2D" parent="Games" unique_id=396362947]
-position = Vector2(1212, 193)
-
-[node name="Flatjude" type="Sprite2D" parent="Games/PlanetGame" unique_id=1171781366]
-position = Vector2(333, 402)
-scale = Vector2(1.2243928, 1.2243928)
-texture = ExtResource("5_ruw4v")
-offset = Vector2(4.083618, -63.705048)
+position = Vector2(7269, 193)
 
 [node name="Polygon2D" type="Polygon2D" parent="Games/PlanetGame" unique_id=187789577]
 z_index = -1
@@ -339,21 +270,13 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-653.80444, -296.42834, -551.3013, -362.91696, -144.0586, -351.8355, 290.88745, -357.37622, 581.77515, -360.1466, 623.3308, -271.49512, 615.0198, -135.74756, 601.1677, 265.9544, 598.3972, 360.1466, 440.48706, 379.53906, 102.503174, 362.91687, -113.58472, 376.76868, -343.5244, 376.76868, -573.4641, 379.53906, -634.4121, 274.2655, -642.72314, 96.962524, -648.2639, -180.0733)
 
 [node name="Baseplate" type="Sprite2D" parent="Games/PlanetGame/Polygon2D" unique_id=1565623641]
-texture = ExtResource("2_dm7o2")
+texture = ExtResource("16_uslha")
 
 [node name="Door2" parent="Games/PlanetGame" unique_id=2026782054 instance=ExtResource("3_kfup3")]
 position = Vector2(194, 323)
 
-[node name="GamerTag" parent="Games/PlanetGame" unique_id=1642407058 instance=ExtResource("5_dxurm")]
-
 [node name="Mall" type="Node2D" parent="Games" unique_id=1894025705]
-position = Vector2(1212, 193)
-
-[node name="Flatjude" type="Sprite2D" parent="Games/Mall" unique_id=2006494451]
-position = Vector2(333, 402)
-scale = Vector2(1.2243928, 1.2243928)
-texture = ExtResource("5_ruw4v")
-offset = Vector2(4.083618, -63.705048)
+position = Vector2(7850, 193)
 
 [node name="Polygon2D" type="Polygon2D" parent="Games/Mall" unique_id=2047931449]
 z_index = -1
@@ -368,7 +291,21 @@ texture = ExtResource("2_dm7o2")
 [node name="Door2" parent="Games/Mall" unique_id=823152930 instance=ExtResource("3_kfup3")]
 position = Vector2(194, 323)
 
-[node name="GamerTag" parent="Games/Mall" unique_id=1920631819 instance=ExtResource("5_dxurm")]
+[node name="Mall2" type="Node2D" parent="Games" unique_id=1486112954]
+position = Vector2(8387, 193)
+
+[node name="Polygon2D" type="Polygon2D" parent="Games/Mall2" unique_id=1734252521]
+z_index = -1
+position = Vector2(194, 79)
+scale = Vector2(0.36096415, 0.36096415)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-653.80444, -296.42834, -551.3013, -362.91696, -144.0586, -351.8355, 290.88745, -357.37622, 581.77515, -360.1466, 623.3308, -271.49512, 615.0198, -135.74756, 601.1677, 265.9544, 598.3972, 360.1466, 440.48706, 379.53906, 102.503174, 362.91687, -113.58472, 376.76868, -343.5244, 376.76868, -573.4641, 379.53906, -634.4121, 274.2655, -642.72314, 96.962524, -648.2639, -180.0733)
+
+[node name="Baseplate" type="Sprite2D" parent="Games/Mall2/Polygon2D" unique_id=141163294]
+texture = ExtResource("2_dm7o2")
+
+[node name="Door2" parent="Games/Mall2" unique_id=1916963430 instance=ExtResource("3_kfup3")]
+position = Vector2(194, 323)
 
 [node name="chuck them in" type="Label" parent="." unique_id=112100210]
 offset_left = 1456.6443
@@ -376,6 +313,40 @@ offset_top = -134.8017
 offset_right = 1496.6443
 offset_bottom = -111.8017
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=287962746]
+position = Vector2(510.00003, 375.00003)
+script = ExtResource("6_hd6uv")
+
 [node name="Bigdoor" type="Sprite2D" parent="." unique_id=157852530]
 position = Vector2(450, 407)
 texture = ExtResource("4_a3agb")
+script = ExtResource("19_uslha")
+
+[node name="GamerTag2" parent="Bigdoor" unique_id=751578326 instance=ExtResource("5_dxurm")]
+offset_left = -22.0
+offset_top = -256.0
+offset_right = 99.0
+offset_bottom = -230.0
+scale = Vector2(2.3463194, 2.3463194)
+text = "Start Game!"
+
+[node name="GamerTag3" parent="Bigdoor" unique_id=1851749512 instance=ExtResource("5_dxurm")]
+offset_left = 471.0
+offset_top = -69.0
+offset_right = 595.6181
+offset_bottom = -17.265656
+scale = Vector2(2.3463194, 2.3463194)
+text = "WASD to move
+Space to start"
+
+[node name="Area2D" type="Area2D" parent="Bigdoor" unique_id=520018677]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bigdoor/Area2D" unique_id=481197045]
+position = Vector2(21, 14)
+shape = SubResource("RectangleShape2D_uslha")
+
+[node name="Prooble 1" parent="." unique_id=165517722 instance=ExtResource("8_5dnqa")]
+position = Vector2(705, 376)
+scale = Vector2(2.6505203, 2.6505203)
+
+[editable path="Prooble 1"]

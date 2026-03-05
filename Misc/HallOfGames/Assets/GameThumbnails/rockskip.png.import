@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfhir3rc5ty0r"
-path="res://.godot/imported/rockskip.png-17440bece888a6b9e60eca1b5a66cb79.ctex"
+path="res://.godot/imported/rockskip.png-db1d1d5981e36579bd28f87ff90e764a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Misc/BaseGameAssets/GameThumbnails/rockskip.png"
-dest_files=["res://.godot/imported/rockskip.png-17440bece888a6b9e60eca1b5a66cb79.ctex"]
+source_file="res://Misc/HallOfGames/Assets/GameThumbnails/rockskip.png"
+dest_files=["res://.godot/imported/rockskip.png-db1d1d5981e36579bd28f87ff90e764a.ctex"]
 
 [params]
 

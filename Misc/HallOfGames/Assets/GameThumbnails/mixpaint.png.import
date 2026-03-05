@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blblyks6mmje7"
-path="res://.godot/imported/tyson.png-88b479945c4e192c0453b3aac7e44297.ctex"
+uid="uid://dpe13fghb3ybc"
+path="res://.godot/imported/mixpaint.png-5f0106901669364f3112988c8e908901.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Misc/BaseGameAssets/GameThumbnails/tyson.png"
-dest_files=["res://.godot/imported/tyson.png-88b479945c4e192c0453b3aac7e44297.ctex"]
+source_file="res://Misc/HallOfGames/Assets/GameThumbnails/mixpaint.png"
+dest_files=["res://.godot/imported/mixpaint.png-5f0106901669364f3112988c8e908901.ctex"]
 
 [params]
 

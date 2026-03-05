@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cey1t22r3cbiu"
-path="res://.godot/imported/pong.png-e2dfbc3f7b6b623fa435d5b18c9ddf3f.ctex"
+uid="uid://cgavkgl8jafjp"
+path="res://.godot/imported/scary.png-67f4d6dbb8b68a96ef917f95aeb95bb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Misc/BaseGameAssets/GameThumbnails/pong.png"
-dest_files=["res://.godot/imported/pong.png-e2dfbc3f7b6b623fa435d5b18c9ddf3f.ctex"]
+source_file="res://Misc/HallOfGames/Assets/GameThumbnails/scary.png"
+dest_files=["res://.godot/imported/scary.png-67f4d6dbb8b68a96ef917f95aeb95bb2.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx51rxppgs7pw"
-path="res://.godot/imported/finishhim.png-0b310aa99b3911011e4a221fc4171a29.ctex"
+uid="uid://cey1t22r3cbiu"
+path="res://.godot/imported/pong.png-d64776fcd26ca64406aae708597f5caf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Misc/BaseGameAssets/GameThumbnails/finishhim.png"
-dest_files=["res://.godot/imported/finishhim.png-0b310aa99b3911011e4a221fc4171a29.ctex"]
+source_file="res://Misc/HallOfGames/Assets/GameThumbnails/pong.png"
+dest_files=["res://.godot/imported/pong.png-d64776fcd26ca64406aae708597f5caf.ctex"]
 
 [params]
 

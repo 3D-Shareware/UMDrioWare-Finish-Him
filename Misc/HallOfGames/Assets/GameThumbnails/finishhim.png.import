@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj7obqsfkosy2"
-path="res://.godot/imported/swat.png-bda874121359180c76c48cbd9ff82190.ctex"
+uid="uid://cx51rxppgs7pw"
+path="res://.godot/imported/finishhim.png-4ead46d9db550171d7bf0ccba58f19d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Misc/BaseGameAssets/GameThumbnails/swat.png"
-dest_files=["res://.godot/imported/swat.png-bda874121359180c76c48cbd9ff82190.ctex"]
+source_file="res://Misc/HallOfGames/Assets/GameThumbnails/finishhim.png"
+dest_files=["res://.godot/imported/finishhim.png-4ead46d9db550171d7bf0ccba58f19d4.ctex"]
 
 [params]
 

@@ -30,6 +30,7 @@ const SCARY_GAME = preload("res://Frameworks(YourStuff)/Scary_Music_Jam/Main/Mai
 const MALL = preload("res://Frameworks(YourStuff)/Mall/MainMallGame.tscn")
 
 var all_games : Array[PackedScene] = [BASEPLATE, MALL, SWAT, REPAIR, PLANET_GAME, PONG, VANDALISM_JUDE_, ROCK_SKIP, TYSON,FINISH_HIM, MIX_PAINT_JUDE_, SCARY_GAME, SEAL_GAME]
+var mix : Array[PackedScene] = []
 
 ## List of games left to play this stage before time scale increases
 var games_to_play_this_stage : Array[PackedScene]
@@ -37,9 +38,9 @@ var score : int = 0
 var lives = 3
 var game_intensity : float = 1.0
 const ENGINE_SPEED_INCREASE = 0.2
-const SPEED_UP_POINT = 2
+const SPEED_UP_POINT = 5
 
-@onready var old_scene : Game = $TransitionManager/SubViewportContainer/SubViewport/Game
+@onready var old_scene : Game = $TransitionManager/SubViewportContainer/SubViewport/HallOfGames
 var new_scene : Game = null
 
 func _ready() -> void:
@@ -62,11 +63,13 @@ func _ready() -> void:
 		#dir_access.list_dir_end()
 	#games_to_play_this_stage = all_games.duplicate()
 #endregion
-	
-	
-	
 
-func start_games():
+func start_games(game : PackedScene = null):
+	if game:
+		mix = [game]
+	else:
+		mix = all_games.duplicate()
+	
 	lives = 3
 	score = 0
 	games_to_play_this_stage = all_games.duplicate()
@@ -90,14 +93,13 @@ func _on_game_ended(won : bool):
 	
 	if games_to_play_this_stage.is_empty():
 		global_ui_container.set_lvl_intensity(game_intensity)
-		games_to_play_this_stage = all_games.duplicate()
+		games_to_play_this_stage = mix.duplicate()
 	
 	var intensity_up = false
-	print(games_to_play_this_stage.size() % SPEED_UP_POINT)
 	if games_to_play_this_stage.size() % SPEED_UP_POINT == 0:
 		game_intensity += ENGINE_SPEED_INCREASE
 		intensity_up = true
-		
+	
 	
 	old_scene.call_deferred("set_process_mode", 4)
 	

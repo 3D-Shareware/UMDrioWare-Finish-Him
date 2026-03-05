@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4id0xmvb5b6f"
-path="res://.godot/imported/mall.png-ca0486ffae876202c6c44e4af9e15281.ctex"
+uid="uid://cettwqm86qww7"
+path="res://.godot/imported/seal.png-fefb3de46565c71065f19c2c495fbce7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Misc/BaseGameAssets/GameThumbnails/mall.png"
-dest_files=["res://.godot/imported/mall.png-ca0486ffae876202c6c44e4af9e15281.ctex"]
+source_file="res://Misc/HallOfGames/Assets/GameThumbnails/seal.png"
+dest_files=["res://.godot/imported/seal.png-fefb3de46565c71065f19c2c495fbce7.ctex"]
 
 [params]
 
