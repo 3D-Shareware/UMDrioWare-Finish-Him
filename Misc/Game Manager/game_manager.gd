@@ -30,7 +30,22 @@ const SEAL_GAME = preload("uid://bvuvngqyv3pri")
 const SCARY_GAME = preload("res://Frameworks(YourStuff)/Scary_Music_Jam/Main/Main.tscn")
 const MALL = preload("res://Frameworks(YourStuff)/Mall/MainMallGame.tscn")
 
-var all_games : Array[PackedScene] = [BASEPLATE, MALL, SWAT, REPAIR, PLANET_GAME, PONG, VANDALISM_JUDE_, ROCK_SKIP, TYSON,FINISH_HIM, MIX_PAINT_JUDE_, SCARY_GAME, SEAL_GAME]
+var all_games : Array[PackedScene] = [
+	BASEPLATE,
+	TRICK_TAPE, 
+	MALL,
+	SWAT,
+	REPAIR,
+	PLANET_GAME,
+	PONG,
+	VANDALISM_JUDE_,
+	ROCK_SKIP,
+	TYSON,
+	FINISH_HIM,
+	MIX_PAINT_JUDE_,
+	SCARY_GAME,
+	SEAL_GAME
+	]
 var mix : Array[PackedScene] = []
 
 ## List of games left to play this stage before time scale increases
